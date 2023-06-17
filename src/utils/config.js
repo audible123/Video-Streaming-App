@@ -102,3 +102,5 @@ export const buttonData = {
   ]
   
 }
+
+export const TOTAL_MSG = 20;

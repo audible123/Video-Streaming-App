@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { closeMenu } from '../utils/appSlice';
 import CommentSection from './CommentSection';
 import { Link } from 'react-router-dom';
 import VideoCard from './VideoCard';
+import LiveChat from './LiveChat';
+import WatchCard from './WatchCard';
 
 function WatchVideo() {
 
+
+  const [live,setlive] = useState(false);
 
     const dispatch = useDispatch();
 
@@ -15,7 +19,7 @@ function WatchVideo() {
     },[])
 
   return (
-    <div className='grid grid-cols-4'>
+    <div className='grid grid-cols-4 w-full'>
     <div className='m-8 col-span-3'>
         <iframe width="1000" height="550" src="https://www.youtube.com/embed/eoOaKN4qCKw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <h1 className='font-bold my-3 text-2xl'>FAST X | Final Trailer</h1>
@@ -38,14 +42,33 @@ function WatchVideo() {
           <CommentSection/>
         </div>
     </div>
-    <div className='col-span-1 overflow-scroll overflow-y-hidden overflow-x-hidden'>
-    <Link to="/watch"><VideoCard/></Link>   
-    <Link to="/watch"><VideoCard/></Link>   
-    <Link to="/watch"><VideoCard/></Link>   
-    <Link to="/watch"><VideoCard/></Link>   
-    <Link to="/watch"><VideoCard/></Link>   
-    <Link to="/watch"><VideoCard/></Link>   
-      
+    <div className='col-span-1 mr-10'>
+     <div className=' h-auto mt-5 shadow-2xl rounded-2xl'>
+     <h1 className='font-bold text-center text-2xl box-border '>Live Chat</h1>
+        {live && <LiveChat/>}
+      {live ? (<button className=' h-14 w-full rounded-b-xl bg-gray-300 ' onClick={()=>setlive(false)}>
+        Hide</button>)
+        :(<button 
+          className=' h-14 w-full bg-gray-300 rounded-b-xl '
+        onClick={()=>setlive(true)}>
+          Show</button>)}
+     </div> 
+     <div className='mt-10 '>
+     <h1 className='font-bold ml-3 text-2xl box-border '>Suggestions</h1>
+     <Link to="/watch"><WatchCard/></Link>   
+     <Link to="/watch"><WatchCard/></Link>   
+     <Link to="/watch"><WatchCard/></Link>   
+     <Link to="/watch"><WatchCard/></Link>   
+     <Link to="/watch"><WatchCard/></Link>   
+     <Link to="/watch"><WatchCard/></Link>   
+     <Link to="/watch"><WatchCard/></Link>   
+     <Link to="/watch"><WatchCard/></Link>   
+     <Link to="/watch"><WatchCard/></Link>   
+     <Link to="/watch"><WatchCard/></Link>   
+     <Link to="/watch"><WatchCard/></Link>   
+     <Link to="/watch"><WatchCard/></Link>   
+     <Link to="/watch"><WatchCard/></Link>   
+     </div>
     </div>
     </div>
     

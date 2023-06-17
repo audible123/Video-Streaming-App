@@ -48,14 +48,14 @@ function Header() {
             </a>
         </div>
         <div className='col-span-11'>
-            <input  type="text" className='border border-gray-400 w-1/2 my-5 ml-28'
+            <input  type="text" className='px-5 w-1/2 border border-gray-400 p-2 rounded-l-full'
 
             onFocus={()=>setShowSuggestion(true)}
             onBlur={()=>setShowSuggestion(false)}
             onChange={(e)=> setSearchQuery(e.target.value)}/>   
             
                      <button 
-            className='border border-gray-400'
+            className='border border-gray-400 px-5 py-2 rounded-r-full bg-gray-100'
             >Search</button>
 
             {showSuggestion && (

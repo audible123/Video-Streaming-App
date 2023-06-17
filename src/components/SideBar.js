@@ -12,7 +12,7 @@ function SideBar() {
   }
 
   return (
-    <div className='h-auto w-80 shadow-xl'>
+    <div className='h-auto w-80 shadow-xl scroll'>
       <ul className='m-5 text-sm w-80'>
         <Link  className='text-xl m-5' to="/">Home</Link>
         <li className='text-xl m-5'>Shorts</li>
