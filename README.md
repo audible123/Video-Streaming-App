@@ -9,6 +9,7 @@ This is a fast which loads in - seconds . this webapp is fast because i have use
 - Nested Commenting technique
 - Lazy Loading and Chunking
 - Reconciliation
+- Config Driven UI
 
 
 ## Demo Link
