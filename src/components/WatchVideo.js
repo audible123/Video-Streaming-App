@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import VideoCard from './VideoCard';
 import LiveChat from './LiveChat';
 import WatchCard from './WatchCard';
+import Description from './Description';
 
 function WatchVideo() {
 
@@ -37,6 +38,9 @@ function WatchVideo() {
           <button className='px-5 ml-2 my-5 bg-gray-200 rounded-md h-8'>DisLikes</button>
           </div>
           <button className='px-5 ml-2 my-5 bg-gray-200 rounded-md h-8'>Share</button>
+        </div>
+        <div>
+          <Description/>
         </div>
         <div>
           <CommentSection/>

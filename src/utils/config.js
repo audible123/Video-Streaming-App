@@ -104,3 +104,6 @@ export const buttonData = {
 }
 
 export const TOTAL_MSG = 20;
+
+
+export const str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec placerat ut nibh ac varius. Ut consectetur sem id venenatis accumsan. Integer viverra varius massa, interdum ornare purus tincidunt nec. Morbi vel ultrices massa. Sed congue mollis tellus, consequat ultrices nibh facilisis id. Aenean nec varius quam, eu malesuada velit. Phasellus eu justo eu augue consequat imperdiet. Vestibulum in enim elementum nibh fermentum euismod in vitae dolor."
