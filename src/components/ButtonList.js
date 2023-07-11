@@ -42,7 +42,10 @@ import { useSelector } from 'react-redux';
   };
 
   return (
-    <div className={isMenuOpen ? "flex w-[1100px]" : "flex w-[1450px]"}>
+
+    <div 
+    className={isMenuOpen ? "flex w-[1100px]" : "flex w-[1450px]"}>
+
       {scrollX !== 0 && (
         <button
           className="bg-black font-bold w-16 h-8 p-2 ml-2 my-5 text-white opacity-40 hover:opacity-100 rounded-full"
@@ -51,15 +54,21 @@ import { useSelector } from 'react-redux';
           L
         </button>
       )}
+
       <ul className='flex list-none overflow-x-hidden max-w-[100%] scroll-smooth overflow-y-hidden' ref={scrl} onScroll={scrollCheck}>
         {buttonData.genre.map((d, i) => (
+
           <Button data={d} key={i} />
+          
         ))}
       </ul>
+
       {!scrolEnd && (
         <button
           className="bg-black font-bold w-16 h-8 p-2 ml-2 my-5 text-white opacity-40 hover:opacity-100 rounded-full"
-          onClick={() => slide(+50)}
+          onClick={
+            () => slide(+50)
+          }
         >
          R 
         </button>

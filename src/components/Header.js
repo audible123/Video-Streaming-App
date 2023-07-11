@@ -35,20 +35,26 @@ function Header() {
 
 
   return (
-    <div className='grid grid-flow-col shadow-lg'>
-        <div className='flex col-span-1' >
+    <div 
+    className='grid grid-flow-col shadow-lg'>
+        <div 
+        className='flex col-span-1' >
             <img
              onClick={()=>toggleSideBar()}
               className='h-16 p-4' 
               src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png?f=webp" alt="menu" />
             
             <a href="/">
-            <img className='h-16'
+            <img 
+            className='h-16'
              src="https://images.indianexpress.com/2017/08/youtube_logo_new-759.jpg" alt="icon" />
             </a>
         </div>
-        <div className='col-span-11'>
-            <input  type="text" className='px-5 w-1/2 border border-gray-400 p-2 rounded-l-full'
+        <div 
+        className='col-span-11'>
+            <input  
+            type="text" 
+            className='px-5 w-1/2 border my-3 border-gray-400 p-2 rounded-l-full'
 
             onFocus={()=>setShowSuggestion(true)}
             onBlur={()=>setShowSuggestion(false)}
@@ -59,21 +65,26 @@ function Header() {
             >Search</button>
 
             {showSuggestion && (
-            <div className='fixed bg-white py-2 px-2 w-[37rem] shadow-lg border border-gray-100'>
+            <div 
+            className='fixed bg-white py-2 px-2 w-[37rem] shadow-lg border border-gray-100'>
             <ul>
                 {suggestion.map((s)=>(
-                    <li key={s} className='py-2 px-3 shadow-sm hover:bg-gray-100'>{s}</li>
+                    <li key={s} 
+                    className='py-2 px-3 shadow-sm hover:bg-gray-100'
+                    >{s}</li>
                 ))}
             </ul>
         </div>
         )}
         
         </div>
-        <div className='col-span-1'>
+        <div 
+        className='col-span-1'>
 
             <img 
             className='h-16 p-3'
-            src="https://www.computerhope.com/jargon/g/guest-user.png" alt="" />
+            src="https://www.computerhope.com/jargon/g/guest-user.png" 
+            alt="" />
         </div>
     </div>
   )

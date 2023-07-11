@@ -28,13 +28,15 @@ function LiveChat() {
 
   return (
     <>
-    <div className='shadow-2xl h-[27rem] mt-6 flex flex-col-reverse overflow-y-scroll'>
+    <div 
+    className='shadow-2xl h-[27rem] mt-6 flex flex-col-reverse overflow-y-scroll'>
       {/* it is not recommended to use index as Key  */}
       {chatMessages.map((c,i)=>(
         <LiveChatMessage key={i} name={c.name} message={c.message}/>
       ))}   
     </div>
     <div className='m-5'>
+      
       <form 
       onSubmit={(e)=>{
         e.preventDefault()
@@ -44,11 +46,17 @@ function LiveChat() {
         }))
       }}
       >
-    <input type="text" value={myLiveMessage} onChange={(e)=>{
+
+    <input 
+    type="text" 
+    value={myLiveMessage} 
+    onChange={(e)=>{
       setMyLiveMessage(e.target.value)
     }}
     className='px-5 w-[70%] border border-gray-400 p-2 rounded-l-full'/>
-    <button className='border border-gray-400 px-5 py-2 rounded-r-full bg-gray-100'>
+
+    <button 
+    className='border border-gray-400 px-5 py-2 rounded-r-full bg-gray-100'>
       Send</button>
     </form>
   </div>

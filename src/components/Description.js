@@ -15,8 +15,10 @@ function Description() {
 
   return (
     <>
-    <h1 className='text-2xl font-bold my-5'>Description</h1>
-    <div className=''>{TruncateString(str,90)}
+    <h1 
+    className='text-2xl font-bold my-5'>Description</h1>
+    <div 
+    className=''>{TruncateString(str,90)}
     <button
     className=''
     onClick={()=>{}}>show more</button></div>
