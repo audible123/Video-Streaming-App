@@ -48,7 +48,7 @@ function VideoList() {
     <div className='flex flex-wrap'>
       {result?.contents?.map((card)=>(
           <Link 
-          to="/watch"
+          to={"/watch/" + card?.video?.videoId}
           key={card?.video?.videoId}
           >
             <VideoCard

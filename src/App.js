@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Children } from 'react';
 import MainContainer from './components/MainContainer';
 import WatchVideo from './components/WatchVideo';
+import Channel from './components/Channel/Channel';
 
 
 const appRouter = createBrowserRouter([{
@@ -18,9 +19,13 @@ const appRouter = createBrowserRouter([{
       element:<MainContainer/>,
     },
     {
-      path:"watch",
+      path:"watch/:id",
       element:<WatchVideo/>,
     },
+    {
+      path:"channel/:id",
+      element:<Channel/>,
+    }
   ], 
 }])
 
