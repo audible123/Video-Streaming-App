@@ -1,6 +1,6 @@
 import React from 'react'
 
-function VideoCard() {
+function WatchCard() {
   return (
     <div 
     className='p-2 m-2 w-[300px] shadow-lg grid grid-cols-2 '>
@@ -18,4 +18,4 @@ function VideoCard() {
   )
 }
 
-export default VideoCard
+export default WatchCard

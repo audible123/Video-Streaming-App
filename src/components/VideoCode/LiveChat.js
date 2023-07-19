@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import LiveChatMessage from './LiveChatMessage'
 import { useDispatch, useSelector } from 'react-redux'
-import { generateRandomName, makeRandomMessage } from '../utils/helper';
-import { addMessage } from '../utils/ChatSlice';
-import store from '../utils/store';
+import { generateRandomName, makeRandomMessage } from '../../utils/helper';
+import { addMessage } from '../../utils/ChatSlice';
+
 
 function LiveChat() {
 

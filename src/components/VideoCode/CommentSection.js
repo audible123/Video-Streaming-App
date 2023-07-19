@@ -1,5 +1,5 @@
 import React from 'react'
-import {commentsData} from '../utils/config'
+import {commentsData} from '../../utils/config'
 
 
 
@@ -34,11 +34,6 @@ function CommentList ({comments}){
     
     }
     
-
-
-    
-
-
 
 function CommentSection() {
   return (

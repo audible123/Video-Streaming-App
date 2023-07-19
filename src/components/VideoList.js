@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {Google_API_LINK} from '../utils/config'
-import VideoCard from './VideoCard';
+import VideoCard from './VideoCode/VideoCard';
 import { Link } from 'react-router-dom';
 import Shimmer from './Shimmer';
 import { useDispatch } from 'react-redux';

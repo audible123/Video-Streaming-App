@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Outlet, useParams } from 'react-router-dom'
 import ChannelCard from './ChannelCard';
+import ChannelHome from './ChannelHome';
 
 function Channel() {
 
@@ -14,7 +15,7 @@ function Channel() {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "002255a91bmsh7d04006fa902b50p1cae6ajsn1888e1582f6a",
+        "X-RapidAPI-Key": process.env.REACT_APP_FIREBASE_RAPID_API_KEY,
         "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
       },
     };
@@ -52,6 +53,9 @@ function Channel() {
           />
      
         <hr />
+      </div>
+      <div>
+        <ChannelHome id={id} />
       </div>
     </div>
   )

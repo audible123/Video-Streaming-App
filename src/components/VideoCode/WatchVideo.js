@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { closeMenu } from '../utils/appSlice';
-import CommentSection from './CommentSection';
+import { closeMenu } from '../../utils/appSlice';
 import { Link, useParams } from 'react-router-dom';
 import VideoCard from './VideoCard';
 import LiveChat from './LiveChat';
-import WatchCard from './WatchCard';
 import Description from './Description';
+import WatchCard from './WatchCard';
+import CommentSection from './CommentSection';
 
 function WatchVideo() {
 
@@ -17,7 +17,7 @@ function WatchVideo() {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "002255a91bmsh7d04006fa902b50p1cae6ajsn1888e1582f6a",
+        "X-RapidAPI-Key": process.env.REACT_APP_FIREBASE_RAPID_API_KEY,
         "X-RapidAPI-Host": "youtube138.p.rapidapi.com",
       },
   };

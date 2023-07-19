@@ -1,6 +1,7 @@
 import React from 'react'
 import { VscVerifiedFilled } from "react-icons/vsc";
 import { BiDotsVerticalRounded } from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
 function VideoCard({
   thumbnail,
@@ -14,7 +15,7 @@ function VideoCard({
 }) {
   return (
     <div
-      className="p-2 m-2 w-[350px] rounded-lg items-center justify-center  "
+      className="p-2 m-2 w-[350px] rounded-lg items-center justify-center"
     >
       <img src={thumbnail} 
       className="w-full rounded-lg" alt="cards" />
@@ -24,11 +25,16 @@ function VideoCard({
 
         <div 
         className="flex-[0.2]  h-[36px] w-[36px]">
+
+            <Link to={"/channel/" + channelId?.author?.channelId}>
             <img
               src={channellogo}
               className="rounded-full h-[36px] w-[36px] cursor-pointer"
               alt="channel"
             />
+            </Link>
+
+            
         </div>
         <ul 
         className="flex-[0.8]">

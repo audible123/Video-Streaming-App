@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { str } from '../utils/config'
+import { str } from '../../utils/config'
 
 function TruncateString(str,num){
 
